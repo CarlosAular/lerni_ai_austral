@@ -27,7 +27,7 @@ def main():
     if "input_enabled" not in st.session_state:
         st.session_state.input_enabled = False
     
-    st.header("Generador de Lecciones - Austral :robot_face:")
+    st.header("Generador de Lecciones - Austral")
 
     if not st.session_state.input_enabled:
         if st.button("Iniciar", type="primary"):
@@ -54,6 +54,5 @@ def main():
                 st.markdown(user_template.replace("{{MSG}}", message.content), unsafe_allow_html=True)
             else:
                 st.markdown(bot_template.replace("{{MSG}}", message.content), unsafe_allow_html=True)
-
 if __name__ == "__main__":
     main()

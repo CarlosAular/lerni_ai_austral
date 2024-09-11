@@ -27,7 +27,7 @@ def main():
     if "input_enabled" not in st.session_state:
         st.session_state.input_enabled = False
     
-    st.header("Lerni - Generador de Lecciones :robot_face:")
+    st.header("Generador de Lecciones - Austral :robot_face:")
 
     if not st.session_state.input_enabled:
         if st.button("Iniciar", type="primary"):

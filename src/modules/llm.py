@@ -8,12 +8,12 @@ load_dotenv()
 
 os.getenv("OPENAI_API_KEY")
 
-openaiModels = ["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo-0125"]
+openaiModels = ["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo-0125", "gpt-4o-2024-08-06"]
 
 
 
 def get_conversation_chain(vectorstore):
-    llm = ChatOpenAI(temperature=0.5, model=openaiModels[0], max_tokens=4000)
+    llm = ChatOpenAI(temperature=0.5, model=openaiModels[0])
     
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
